@@ -6,7 +6,8 @@ on:
       - "*"
 
 permissions:
-  contents: write
+  contents: write  # Ensures write access to contents, which includes releases
+  id-token: write  # Ensures the token can create releases
 
 jobs:
   goreleaser:
